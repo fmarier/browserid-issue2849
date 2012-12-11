@@ -1,0 +1,10 @@
+{
+  "processes": [
+    "bin/app.js"
+  ],
+  "env": {
+    "BROWSERID_VERIFIER_HOST": "verifier.login.persona.org",
+    "BROWSERID_VERIFIER_PORT": "443",
+    "PUBLIC_URL": "https://issue2849.personatest.org"
+  }
+}
