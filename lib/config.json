@@ -1,0 +1,12 @@
+{
+    "browserid": {
+        "includejs": "https://login.persona.org/include.js",
+        "verifier": {
+            "host": "verifier.login.persona.org"
+        }
+    },
+    "bind_to": {
+        "port": 9000
+    },
+    "public_url" : "http://127.0.0.1:9000"
+}

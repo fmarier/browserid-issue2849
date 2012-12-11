@@ -1,0 +1,21 @@
+{
+  "name": "issue2849",
+  "version": "0.0.1",
+  "description": "Test case for browserid issue 2849",
+  "main": "app.js",
+  "dependencies": {
+    "convict": ">= 0.0.6",
+    "express": ">= 3.0.0",
+    "jade": ">= 0.0.1",
+    "qs": ">= 0.4.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fmarier/browserid-issue2849"
+  },
+  "author": "Francois Marier <francois@mozilla.com>",
+  "license": "MPL2",
+  "scripts": {
+    "start": "bin/app.js"
+  }
+}

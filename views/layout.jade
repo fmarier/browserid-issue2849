@@ -1,0 +1,37 @@
+!!!
+html
+  head
+    title= title
+  body
+    nav
+      if user
+        a#logout(href='javascript:navigator.id.logout()') Logout
+      else
+        form(id="login-form", action="/auth", method="POST")
+          input(id="assertion-field", type="hidden", name="assertion", value="")
+        a#browserid(href='javascript:navigator.id.request()') Sign in
+    block mainContent
+    if user
+      script
+        var loggedInUser = '#{user}';
+    else
+      script
+        var loggedInUser = null;
+    script(src=includejs)
+    script
+      window.onload = function () {
+        navigator.id.watch({
+          loggedInUser: loggedInUser,
+          onlogin: function (assertion) {
+            alert('onlogin (loggedInUser = ' + loggedInUser + ')');
+            var assertion_field = document.getElementById("assertion-field");
+            assertion_field.value = assertion;
+            var login_form = document.getElementById("login-form");
+            login_form.submit();
+          },
+          onlogout: function () {
+            alert('onlogout (loggedInUser = ' + loggedInUser + ')');
+            window.location = '/logout';
+          }
+        });
+      };
