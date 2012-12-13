@@ -1,8 +1,8 @@
 {
     "browserid": {
-        "includejs": "https://login.persona.org/include.js",
+        "includejs": "https://persona-issue2849.personatest.org/include.js",
         "verifier": {
-            "host": "verifier.login.persona.org"
+            "host": "persona-issue2849.personatest.org"
         }
     },
     "bind_to": {
